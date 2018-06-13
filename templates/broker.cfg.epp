@@ -65,3 +65,13 @@ plugin.choria.adapter.<%= $adapter %>.<%= $section %>.<%= $key %> = <%= $value %
 <%      } -%>
 <%   } -%>
 <% } -%>
+
+<% if $choria::broker::puppet_ssldir { -%>
+plugin.choria.ssldir = <%= $choria::broker::puppet_ssldir %>
+<% } -%>
+<% if $choria::broker::puppetca_host { -%>
+plugin.choria.puppetca_host = <%= $choria::broker::puppetca_host%>
+<% } -%>
+<% if $choria::broker::puppetca_port { -%>
+plugin.choria.puppetca_port = <%= $choria::broker::puppetca_port %>
+<% } -%>

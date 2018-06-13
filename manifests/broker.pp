@@ -61,7 +61,10 @@ class choria::broker (
   Array[String] $federation_middleware_hosts,
   Array[String] $collective_middleware_hosts,
   Choria::Adapters $adapters,
-  String $identity
+  String $identity,
+  String $puppet_ssldir,
+  String $puppetca_host,
+  Integer $puppetca_port,
 ) {
   require choria
 
